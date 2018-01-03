@@ -1,0 +1,86 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="design by www.adminbuy.cn" />
+<link rel="stylesheet" href="/style/css/style.css">
+<style type="text/css">
+body,td,th {
+	font-family: Arial, SimSun, "Microsoft Yahei", "微软雅黑", MicrosoftJhengHei, "华文细黑", "Hiragino Sans GB", sans-serif;
+}
+</style>
+<script type="text/javascript" src="/style/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/style/js/fade.js"></script>
+<script type="text/javascript" src="/style/js/zhhk.js"></script>
+<script type="text/javascript">
+	    $(function() {
+	        $(".size").responsiveSlides({
+	            auto: true,
+	            pager: true,
+	            nav: true,
+	            speed: 700,
+	            maxwidth: 1920
+	        });
+	    });
+	</script>
+</head>
+<body>
+    <div id="header" class="png_bg">
+        <div class="w1000">
+            <a href="" id="logo"></a>
+            <ul id="nav">
+                <li><a href="/">网站首页</a></li>
+                
+                {dede:channelartlist row=20 typeid='top' currentstyle="<li><a href='~typelink~' class='active'>~typename~</a></li>"}
+                <li><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+                 <ul>
+                    {dede:channel type='son' noself='yes'}
+                    <li><a href="[field:typelink/]">[field:typename/]</a></li>
+                    {/dede:channel}
+                 </ul>
+                </li>
+                {/dede:channelartlist}
+                
+           </ul>
+        </div>
+</div>
+<div class="advertise">
+  <ul class="rslides size">
+        <li><a style="background:url(/style/images/banner1.jpg) center top no-repeat;" href="/"></a></li>
+        <li><a style="background:url(/style/images/banner2.jpg) center top no-repeat;" href="/"></a></li>
+  </ul>
+</div>
+<div class="page_link w1000 clr">
+  <div class="company fl">
+  <h2><span>公司简介<em>Company Profile</em></span></h2>
+    <a href="/about/" class="more">more<span>&gt;&gt;</span></a> 
+    <a href="/about/"><img src="/style/images/about.jpg" width="289" height="87" /></a> </div>
+  <div class="case fl">
+  <h2><span>案例中心<em>Case Center</em></span></h2>
+    <a href="/case/" class="more">more<span>&gt;&gt;</span></a>
+    <ul class="clr">
+    
+   {dede:arclist row='3' titlelen='36' typeid='7' type='image'}
+    <li><a href="[field:arcurl/]"><img src="[field:litpic/]" width="100" height="90">
+     <div class="bbar"></div>
+        <p>[field:title/]</p></a>
+     </li>
+	{/dede:arclist}
+    
+    </ul>
+      </div>
+  <div class="contact fr">
+  <h2><span>联系我们<em>Contact us</em></span></h2>
+    <a href="/contact/" class="more">more<span>&gt;&gt;</span></a> 
+    <a href="/contact/"><img src="/style/images/contact.jpg" width="213" height="87" /></a> 
+    </div>
+    </div>
+
+{dede:include filename="foot.htm"/}
+
+</body>
+</html>

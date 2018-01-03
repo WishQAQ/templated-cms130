@@ -1,0 +1,2 @@
+INSERT INTO `dede_shipin5869` VALUES('5','7','','','127.0.0.1','http://player.youku.com/player.php/sid/XODQ5ODExODMy/v.swf');
+INSERT INTO `dede_shipin5869` VALUES('17','7','','','127.0.0.1','http://player.youku.com/player.php/sid/XODUwNzgzMjI4/v.swf');

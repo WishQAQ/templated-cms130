@@ -1,0 +1,123 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="author" content="design by www.adminbuy.cn" />
+<link rel="stylesheet" href="/style/css/style.css">
+<style type="text/css">
+body,td,th {
+font-family: Arial, SimSun, "Microsoft Yahei", "微软雅黑", MicrosoftJhengHei, "华文细黑", "Hiragino Sans GB", sans-serif;
+}
+</style>
+<script type="text/javascript" src="/style/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/style/js/fade.js"></script>
+<script type="text/javascript" src="/style/js/zhhk.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $(".size").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: true,
+            speed: 700,
+            maxwidth: 1920
+        });
+    });
+</script>
+<script>
+  function check()
+  {
+	yxm=document.getElementById("yxm").value;
+	if(yxm=="")
+	{
+		alert("请输入姓名！")
+		return false;
+	}
+	
+	ydh=document.getElementById("ydh").value;
+	if(ydh=="")
+	{
+		alert("请输入手机！")
+		return false;
+	}
+	
+	yyx=document.getElementById("yyx").value;
+	if(yyx=="")
+	{
+		alert("请输入邮箱")
+		return false;
+	}
+	
+	ynr=document.getElementById("ynr").value;
+	if(ynr=="")
+	{
+		alert("请输入内容")
+		return false;
+	}
+
+  }
+ 
+</script>
+
+</head>
+
+{dede:include filename="head.htm"/}
+	
+<div class="w1000 clr mt20">
+	<div id="aside">
+          <h2>在线留言
+          <span>GUESTBOOK</span>
+          </h2>
+        <ul id="menu">
+            {dede:channelartlist type='son' typeid='12'}
+            <li {dede:field name='currentstyle'/}><a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a></li>
+            {/dede:channelartlist}
+        </ul>
+             <a href="http://wpa.qq.com/msgrd?v=3&uin={dede:global.cfg_qq/}&site=qq&menu=yes" class="company_qq" target="_blank"></a>
+            <div class="news">
+            <ul class="switch_bar clr">          
+                <li  class="active" >公司新闻<span>Company News</span></li>    
+                <li >行业新闻<span>Industry News</span></li>                                               
+            </ul>
+      <ul class="list" style="display:block;">
+     {dede:arclist row='6' titlelen='24' typeid='5'}
+     <li><span>[field:pubdate  function='strftime("%m-%d",@me)'/]</span><a href="[field:arcurl/]">[field:title/]</a></li>
+    {/dede:arclist}
+    </ul>
+    <ul class="list" >
+     {dede:arclist row='6' titlelen='24' typeid='6'}
+     <li><span>[field:pubdate  function='strftime("%m-%d",@me)'/]</span><a href="[field:arcurl/]">[field:title/]</a></li>
+    {/dede:arclist}
+    </ul>
+          </div>
+</div>	
+	<div id="content">
+	<ul class="bread_nav">
+	<li>您所在的位置：</li><li>{dede:field.position/}</li>
+	</ul>
+    <div id="" class="editBox">
+    	<ul class="ly">
+        	<form action="/plus/diy.php" enctype="multipart/form-data" method="post" onSubmit="return check()">
+            <input type="hidden" name="action" value="post" />
+            <input type="hidden" name="diyid" value="1" />
+            <input type="hidden" name="do" value="2" />
+        	<li>您的姓名：<input type="text" name="yxm" id="yxm" class="k" /></li>
+            <li>您的电话：<input type="text" name="ydh" id="ydh" class="k" /></li>
+            <li>您的邮箱：<input type="text" name="yyx" id="yyx" class="k" /></li>
+            <li>留言内容：<textarea name="ynr" id="ynr"></textarea></li>
+            <input type="hidden" name="dede_fields" value="yxm,text;ydh,text;yyx,text;ynr,multitext" />
+            <input type="hidden" name="dede_fieldshash" value="49e3bb29c5c657fcb3c42970f9dd8fe5" />
+            <li><input type="submit" class="t" /></li>
+            </form>
+        </ul>
+    </div>
+		</div>
+	</div>
+    
+	{dede:include filename="foot.htm"/}
+    
+</body>
+</html>

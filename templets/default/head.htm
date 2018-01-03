@@ -1,0 +1,26 @@
+  <div id="header" class="png_bg">
+        <div class="w1000">
+            <a href="/" id="logo"></a>
+            <ul id="nav">
+                <li><a href="/">网站首页</a></li>
+                
+              {dede:channelartlist row=20 typeid='top'}
+                <li><a href="{dede:field name='typeurl'/}" {dede:field name='currentstyle'/}>{dede:field name='typename'/}</a>
+                 <ul>
+                    {dede:channel type='son' noself='yes'}
+                    <li><a href="[field:typelink/]">[field:typename/]</a></li>
+                    {/dede:channel}
+                 </ul>
+                </li>
+                {/dede:channelartlist}
+                
+           </ul>
+        </div>
+</div>
+
+<div class="advertise min">
+  <ul class="rslides size">
+     <li><a style="background:url(/style/images/nei1.jpg) center top no-repeat;" href="#"></a></li>
+     <li><a style="background:url(/style/images/nei2.jpg) center top no-repeat;" href="#"></a></li>
+  </ul>
+</div>

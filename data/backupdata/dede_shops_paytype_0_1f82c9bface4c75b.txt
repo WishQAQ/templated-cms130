@@ -1,0 +1,5 @@
+INSERT INTO `dede_shops_paytype` VALUES('2','璐у埌浠樻?','璐у埌鍚庢敮浠樿喘鐗╂?椤');
+INSERT INTO `dede_shops_paytype` VALUES('1','缃戦摱鏀?粯','鑳借繃缃戜笂閾惰?鏀?粯璐?墿閲戦?');
+INSERT INTO `dede_shops_paytype` VALUES('3','閾惰?杞?笎','璐﹀彿:\r\n鎴峰悕:dd\r\n寮');
+INSERT INTO `dede_shops_paytype` VALUES('4','閭?斂姹囨?','鍦板潃:\r\n閭?紪:jj\r\n濮撳悕:');
+INSERT INTO `dede_shops_paytype` VALUES('5','鐐规暟璐?拱','鎵ｄ細鍛樼珯鍐呰处涓婇噾甯佺偣鏁');

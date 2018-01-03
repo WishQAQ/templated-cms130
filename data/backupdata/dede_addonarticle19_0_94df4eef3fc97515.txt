@@ -1,0 +1,4 @@
+INSERT INTO `dede_addonarticle19` VALUES('79','55','产品视频1','','','127.0.0.1','','/uploads/140520/1-140520102623228.jpg','');
+INSERT INTO `dede_addonarticle19` VALUES('80','55','产品视频2','','','127.0.0.1','','/uploads/140520/1-140520102623228.jpg','');
+INSERT INTO `dede_addonarticle19` VALUES('81','55','产品视频3','','','127.0.0.1','','/uploads/140520/1-140520102623228.jpg','');
+INSERT INTO `dede_addonarticle19` VALUES('82','55','产品视频4','','','127.0.0.1','','/uploads/140520/1-140520102623228.jpg','');

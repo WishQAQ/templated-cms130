@@ -1,0 +1,1 @@
+INSERT INTO `dede_kwcache` VALUES('38','1','http://china.nowec.com/product/detail/605975.html');
